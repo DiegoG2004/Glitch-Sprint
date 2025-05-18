@@ -7,7 +7,7 @@ public class SettingsManager : MonoBehaviour
     public static SettingsManager m_Instance { get; private set; }
 
     public GameSettings m_CurrentGameSettings;
-    private string m_SettingsFileName = "Settings.moai";
+    private string m_SettingsFileName = "Settings.save";
 
     public AudioMixer m_AudioMixer;
 
