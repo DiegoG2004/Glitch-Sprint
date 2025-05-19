@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 98bdd2e108de67d439c390dc7cb78caa
+timeCreated: 1465566653
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87901
+  packageName: Endless Runner - Sample Game
+  packageVersion: 1.97.1
+  assetPath: Assets/Materials/CorrugatedMetal.mat
+  uploadId: 518529

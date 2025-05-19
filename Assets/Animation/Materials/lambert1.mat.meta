@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5a50f50d60db8584d8079d8fc0b627ad
+timeCreated: 1482140599
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87901
+  packageName: Endless Runner - Sample Game
+  packageVersion: 1.97.1
+  assetPath: Assets/Animation/Materials/lambert1.mat
+  uploadId: 518529

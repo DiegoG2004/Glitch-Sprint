@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e678ec0f80695014392e78a0142dfd2f
+timeCreated: 1463482269
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87901
+  packageName: Endless Runner - Sample Game
+  packageVersion: 1.97.1
+  assetPath: Assets/Shaders/CurvedUnlitAlpha.shader
+  uploadId: 518529

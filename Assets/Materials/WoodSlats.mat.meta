@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da664df448f82244e9298f1b25ecab3b
+timeCreated: 1465566653
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87901
+  packageName: Endless Runner - Sample Game
+  packageVersion: 1.97.1
+  assetPath: Assets/Materials/WoodSlats.mat
+  uploadId: 518529

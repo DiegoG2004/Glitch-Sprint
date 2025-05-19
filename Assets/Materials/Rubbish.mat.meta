@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 10e8db89de774a84c9cfd9eb0e469ae0
+timeCreated: 1464793286
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87901
+  packageName: Endless Runner - Sample Game
+  packageVersion: 1.97.1
+  assetPath: Assets/Materials/Rubbish.mat
+  uploadId: 518529

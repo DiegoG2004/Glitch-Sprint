@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c8c02decebafb7246953032df24e5c77
+timeCreated: 1457006081
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87901
+  packageName: Endless Runner - Sample Game
+  packageVersion: 1.97.1
+  assetPath: Assets/Materials/BlobShadow.mat
+  uploadId: 518529

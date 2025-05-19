@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8ae7f702ec351074699756ad9e5ccd8a
+timeCreated: 1465824053
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87901
+  packageName: Endless Runner - Sample Game
+  packageVersion: 1.97.1
+  assetPath: Assets/Materials/Graffiti.mat
+  uploadId: 518529
