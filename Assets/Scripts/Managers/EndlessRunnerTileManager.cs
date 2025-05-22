@@ -6,9 +6,10 @@ public class EndlessRunnerTileManager : MonoBehaviour
 {
     [Header("Tile Options")]
     public GameObject[] m_TilePrefabs;
-    public float m_TileLength = 10f;
+    public float m_TileLength = 44f;
     public int m_IndexToSpawn = 5;
     public int m_MaxInstancesPerTile = 3;
+    private Vector3 m_TileSpawnOffset = new Vector3(-57.4f, 5.2f, 0f); // Ajuste visual
 
     [Header("Movement Options")]
     public float m_MaxSpeed = 5f;
@@ -19,6 +20,24 @@ public class EndlessRunnerTileManager : MonoBehaviour
     [Header("Tile Pools")]
     public List<GameObject> m_ActiveTiles = new List<GameObject>();
     public List<GameObject> m_TilePool = new List<GameObject>();
+
+   
+
+    private void PlaceRandomTile(int positionindex = 0)
+    {
+        if (m_TilePool.Count == 0) return;
+
+        int index = Random.Range(0, m_TilePool.Count);
+        GameObject tile = m_TilePool[index];
+        m_TilePool.RemoveAt(index);
+
+        float zpos = positionindex * m_TileLength;
+        tile.transform.position = m_TileSpawnOffset + new Vector3(0, 0, zpos); // APLICAR OFFSET
+
+        m_ActiveTiles.Add(tile);
+        tile.SetActive(true);
+    }
+
 
     void Awake()
     {
@@ -47,21 +66,7 @@ public class EndlessRunnerTileManager : MonoBehaviour
             PlaceRandomTile(i);
         }
     }
-    private void PlaceRandomTile(int positionindex = 0)
-    {
-        if (m_TilePool.Count == 0) return;
-        //Grab a random tile from the list
-        int index = Random.Range(0, m_TilePool.Count);
-        GameObject tile = m_TilePool[index];
-        m_TilePool.RemoveAt(index);
-        //Place the tile where it should be
-        float zpos = positionindex * m_TileLength;
-        tile.transform.position = new Vector3(0,0,zpos);
-        //Turn on the tile
-        m_ActiveTiles.Add(tile);
-        //To do: if positionindex == IndexToSpawn, spawn items
-        tile.SetActive(true);
-    }
+ 
     // Update is called once per frame
     void Update()
     {

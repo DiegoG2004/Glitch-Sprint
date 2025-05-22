@@ -519,8 +519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TilePrefabs:
-  - {fileID: 829965901122444377, guid: a9c3e72a6df83244b9958f9285d26e63, type: 3}
-  m_TileLength: 18
+  - {fileID: 1430214026083116917, guid: 9b5cf94f843b8f64c850296aa0bee2e4, type: 3}
+  m_TileLength: 44
   m_IndexToSpawn: 10
   m_MaxInstancesPerTile: 15
   m_MaxSpeed: 5
