@@ -5,15 +5,18 @@ using UnityEngine;
 using UnityEngine.Android;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class DayliesManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public static DayliesManager m_Instance { get; private set; }
     public float[] RequirementsDailies;
     public TypesofMission[] TypeofDaily;
     public bool[] CompleatedDailies;
     DateTime currentDate;
     DateTime oldDate;
+    bool MoreThanADay = false;
     public enum TypesofMission
     {
         NONE = -1,
@@ -23,19 +26,20 @@ public class DayliesManager : MonoBehaviour
         TIME_SURVIVED = 3
     }
 
-    public enum DailyState
-    {
-        NONE = -1,
-        NOT_DONE = 0,
-        DONE_UNCLAIMED = 1,
-        DONE_CLAIMED = 2
-    }
-
 private void Awake()
     {
         if (!Permission.HasUserAuthorizedPermission("android.permission.POST_NOTIFICATIONS"))
         {
             Permission.RequestUserPermission("android.permission.POST_NOTIFICATIONS");
+        }
+        if (m_Instance == null)
+        {
+            m_Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
     }
@@ -73,6 +77,7 @@ private void Awake()
         if(difference.Days >= 1)
         {
             CreatingDaylies();
+            MoreThanADay = true;
         }
     }
 
@@ -122,15 +127,33 @@ private void Awake()
 
     public void OnGameStart()
     {
-
+        //Create Dailies Tracker
     }
- 
+
+    public string WriteDailiesText(int i)
+    {
+        switch (TypeofDaily[i])
+        {
+            case TypesofMission.GRAB_COINS:
+                return "Get " + RequirementsDailies[i] + " Coins";
+            case TypesofMission.GET_POINTS:
+                return "Get " + RequirementsDailies[i] + " Points";
+            case TypesofMission.ACHIEVE_COMBO:
+                return "Achive " + RequirementsDailies[i] + "x Combo";
+            case TypesofMission.TIME_SURVIVED:
+                return "Survive " + RequirementsDailies[i] + " Seconds";
+            default:
+                return null;
+        }
+    }
+
 
     void OnApplicationQuit()
     {
-        //Savee the current system time as a string in the player prefs class
-        PlayerPrefs.SetString("sysString", System.DateTime.Now.ToBinary().ToString());
+        if (MoreThanADay)
+        {
+            PlayerPrefs.SetString("sysString", System.DateTime.Now.ToBinary().ToString());
+        }
 
-        print("Saving this date to prefs: " + System.DateTime.Now);
     }
 }
