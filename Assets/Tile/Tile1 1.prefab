@@ -1929,10 +1929,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3841575875341292220}
-<<<<<<< HEAD
-=======
-  - component: {fileID: -3050569813290532514}
->>>>>>> parent of 9848e59 (Commit)
   m_Layer: 0
   m_Name: Tile1 1
   m_TagString: Untagged
@@ -2060,30 +2056,6 @@ Transform:
   - {fileID: 8233013796990958455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
-<<<<<<< HEAD
-=======
---- !u!114 &-3050569813290532514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430214026083116917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd6f540c16e0e744ca43b2c67da4c505, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TileLength: 50
-  m_ObstacleCount: 3
-  m_CoinCount: 8
-  m_ObstaclesRoot: {fileID: 0}
-  m_CoinsRoot: {fileID: 0}
-  m_LanePositions:
-  - -2
-  - 0
-  - 2
->>>>>>> parent of 9848e59 (Commit)
 --- !u!1 &1444324556163500366
 GameObject:
   m_ObjectHideFlags: 0
