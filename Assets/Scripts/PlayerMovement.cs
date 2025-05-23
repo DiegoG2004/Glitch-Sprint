@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Lane Switching")]
     public int m_CurrentLane = 0; //-1 = left, 0 = middle, 1 = right
     public float m_DistanceBetweenLanes = 2f;
+    [Header("GameScore")]
+    public float Coins;
+    public float Points;
+    public float HighestCombo;
+    public float SurvivedTime;
     [Header("Others")]
     public bool m_AdReviveUsed;
     public float m_StarReviveAdRevive;

@@ -132,6 +132,10 @@ private void Awake()
 
     public string WriteDailiesText(int i)
     {
+        if (CompleatedDailies[i])
+        {
+            return "Compleated: Return Tomorrow";
+        }
         switch (TypeofDaily[i])
         {
             case TypesofMission.GRAB_COINS:
@@ -144,6 +148,42 @@ private void Awake()
                 return "Survive " + RequirementsDailies[i] + " Seconds";
             default:
                 return null;
+        }
+    }
+
+    public void OnGameEnd()
+    {
+        //Recodar mover esto si ponemos otro Scri`pt para guardar los datos
+        PlayerMovement Player = FindFirstObjectByType<PlayerMovement>();
+        CurrencyManager GiveStars = FindFirstObjectByType<CurrencyManager>();
+        float GameScore = 0;
+        for (int i = 0; i < 3; i++)
+        {
+            if (!CompleatedDailies[i])
+            {
+                switch (TypeofDaily[i])
+            {
+                case TypesofMission.GRAB_COINS:
+                    GameScore = Player.Coins;
+                    break;
+                case TypesofMission.GET_POINTS:
+                    GameScore = Player.Points;
+                    break;
+                case TypesofMission.ACHIEVE_COMBO:
+                    GameScore = Player.HighestCombo;
+                    break;
+                case TypesofMission.TIME_SURVIVED:
+                    GameScore = Player.SurvivedTime;
+                    break;
+                default:
+                    break;
+            }
+            if(GameScore >= RequirementsDailies[i])
+            {
+                GiveStars.AddStars(10);
+                CompleatedDailies[i] = true;
+            }
+            }
         }
     }
 
