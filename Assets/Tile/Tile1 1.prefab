@@ -1929,7 +1929,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3841575875341292220}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   - component: {fileID: -3050569813290532514}
+>>>>>>> parent of 9848e59 (Commit)
+=======
+>>>>>>> parent of 52af6ca (SceneChange)
   m_Layer: 0
   m_Name: Tile1 1
   m_TagString: Untagged
@@ -2057,6 +2063,9 @@ Transform:
   - {fileID: 8233013796990958455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 --- !u!114 &-3050569813290532514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,6 +2087,9 @@ MonoBehaviour:
   - -2
   - 0
   - 2
+>>>>>>> parent of 9848e59 (Commit)
+=======
+>>>>>>> parent of 52af6ca (SceneChange)
 --- !u!1 &1444324556163500366
 GameObject:
   m_ObjectHideFlags: 0
